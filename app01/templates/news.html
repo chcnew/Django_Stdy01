@@ -1,0 +1,18 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>news</title>
+</head>
+<body>
+<ul>
+    {% for x in data_lst %}
+        {% for v in x.values %}
+            <li>{{ v }}</li>
+        {% endfor %}
+    {% endfor %}
+</ul>
+</body>
+</html>

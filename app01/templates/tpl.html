@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tpl</title>
+</head>
+<body>
+<h1>模板语法的学习--tpl函数页面</h1>
+<hr>
+<h2>views里边对应函数的变量引用</h2>
+<h2>x1,x2变量引用</h2>
+<div>{{ x1 }}</div>
+<div>{{ x2 }}</div>
+<hr>
+<h2>x2列表变量的元素引用</h2>
+<div>{{ x2.0 }}</div>
+<div>{{ x2.1 }}</div>
+<div>{{ x2.2 }}</div>
+<hr>
+<h2>循环实现列表变量的元素引用</h2>
+<ul>
+    {% for item in x2 %}
+    <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+<hr>
+<h2>循环实现字典变量的元素引用</h2>
+<ul>
+    {% for key,value in x3.items %}
+    <li>{{ key }} : {{ value }}</li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
